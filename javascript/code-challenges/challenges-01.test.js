@@ -44,6 +44,7 @@ const addExclamation = (arr1Challenge2) => {
 addExclamation(arr1Challenge2);
 
 console.log(`Challenge #2: ` + arr2Challenge2);
+
 //console.log(`Challenge #2: ` + addExclamation(arr1Challenge2));
 
 
@@ -60,14 +61,16 @@ let arr2Challenge3 = [];
 
 const allUpperCase = (arr1Challenge3) => {
   arr1Challenge3.forEach((value, idx) => {
+    //   console.log(value);
     arr2Challenge3.push(value.toUpperCase())
   });
   return arr2Challenge3;
 };
 
-allUpperCase(arr1Challenge3);
+//allUpperCase(arr1Challenge3);
 
-console.log(`Challenge #3: ` + allUpperCase(arr1Challenge1));
+console.log(`Challenge #3: ` + allUpperCase(arr1Challenge3));
+
 // console.log(`Challenge #3: ` + arr2Challenge3);
 
 
@@ -84,23 +87,23 @@ const greeting = (word) => {
 };
 
 greeting(word);
-console.log(`Challenge #4 pt1: ` + greeting(word));
+// console.log(`Challenge #4 pt1: ` + greeting(word));
 
 /* Part 2: Then, write a function named `speaker` that takes in an array of strings and a callback function. Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. */
 
-let words = ['Rayna Kapec', 'Zhat Vash', 'Kasidy Yates', 'Michael Sullivan'];
+let names = ['Rayna Kapec', 'Zhat Vash', 'Kasidy Yates', 'Michael Sullivan'];
 let arrNew = [];
 
-const speaker = (words, callback) => {
-  words.forEach((value, idx) => {
-    arrNew.push(value + greeting)
+const speaker = (names, callback) => {
+  names.forEach((name, idx) => {
+    arrNew.push(name + `, ` + callback(word))
   });
   //  console.log(arrNew);
   return arrNew;
 };
 
-speaker(words, greeting);
-console.log(`Challenge #4 Pt 2 & 3: ` + arrNew);
+speaker(names, greeting);
+console.log(`Challenge #4: ` + arrNew);
 
 /*
 ------------------------------------------------------------------------------------------------ */
@@ -121,6 +124,7 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 // Attribution: I didn't understand this question at all, the following solution was presented by Instructor in Class 02.
+let testArray = [];
 
 const addValues = (arr, value) => {
   arr.push(value);
@@ -130,8 +134,11 @@ const addNumbers = (num, arr, times, callback) => {
   for (let i = 0; i < times; i++) {
     callback(arr, num);
   }
+  console.log(`Challenge #5: ` + arr);
   return arr;
 };
+
+addNumbers(4, testArray, 5, addValues);
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -153,6 +160,13 @@ This function should use forEach to populate your grocery list based on the stor
 
 // Attribution: I didn't understand this question at all, the following solution was presented by Instructor in Class 02.
 
+let testArr = [
+  { name: 'apples', available: true },
+  { name: 'pears', available: true },
+  { name: 'oranges', available: false },
+  { name: 'bananas', available: true },
+  { name: 'blueberries', available: false }];
+
 const createList = (availableItems) => {
   let arr1Challenge6 = [];
   availableItems.forEach((item) => {
@@ -160,8 +174,12 @@ const createList = (availableItems) => {
       arr1Challenge6.push(item.name);
     }
   });
+  console.log(`Challenge #6: ` + arr1Challenge6);
+
   return arr1Challenge6;
 };
+
+createList(testArr);
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
