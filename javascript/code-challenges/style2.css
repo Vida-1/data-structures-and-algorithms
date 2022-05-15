@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: darkgrey;
+  padding: 10px;
+  margin: 5px;
+}
+
+header {
+  background-color: grey;
+  padding: 10px 20px;
+  display: flexbox;
+}
+
+img {
+  align: center;
+  width: max-content;
+  margin-left: 4em;
+}
+
+main {
+  background-color: lightsalmon;
+  padding: 10px 20px;
+  font-size: larger;
+}
+
+footer {
+  background-color: grey;
+  text-align: right;
+  padding: 5px 10px;
+
+}
