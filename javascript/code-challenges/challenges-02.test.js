@@ -10,8 +10,8 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 let arrC1 = [2, 4, 5, -7, 0];
 let arrC1New = [];
 
-const raisedToTheThird = (arrC1) => {
-  arrC1.forEach((value, idx) => {
+const raisedToTheThird = (arr) => {
+  arr.forEach((value, idx) => {
     arrC1New.push(
       Math.pow(value, 3))
   })
@@ -32,7 +32,7 @@ let arrC2New = [];
 
 let addOne = arrC2.map((value, idx) => { return (value + 1) });
 
-console.log(`Challenge #2-2: ` + addOne);
+console.log(`Challenge 2-2: ` + addOne);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -44,8 +44,8 @@ let arr2C3 = [];
 
 let addQuestion = arr1C3.map((value, idx) => { return (value + `?`) });
 
-console.log(`Challenge #2-3: ` + addQuestion);
-//console.log(`Challenge #2-3: ` + addQuestion);
+console.log(`Challenge 2-3: ` + addQuestion);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -56,20 +56,19 @@ You may choose to complete this challenge using a for loop, for...in syntax, or 
 
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
+let testarr4 = [1, 2, 3, 4, 5];
+let arrNew = [];
 
-let arr1C4 = [1, 2, 3, 4, 5];
-let arr2C4New = [];
-let arrayLength = arr1C4.length();
-
-let forLoopTwoToThe = (arr1C4) => {
-  for (i = 0; i < arrayLength, i++) {
-    arr2C4New.push(
-      Math.pow(2, arr1C4[i]))
+const forLoopTwoToThe = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    arrNew.push(
+      Math.pow(2, arr[i]))
   };
-  return arr2C4New;
+  return arrNew;
 };
 
-console.log(`Challenge 2-4: ` + forLoopTwoToThe);
+forLoopTwoToThe(testarr4);
+console.log(`Challenge 2-4: ` + arrNew);
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,8 +80,8 @@ Write a function named forEachTwoToThe that produces the same output as your for
 let arr1C5 = [1, 2, 3, 4, 5];
 let arr2C5New = [];
 
-const forEachTwoToThe = (arr1C5) => {
-  arr1C5.forEach((value, idx) => {
+const forEachTwoToThe = (arr) => {
+  arr.forEach((value, idx) => {
     arr2C5New.push(
       Math.pow(2, value))
   })
