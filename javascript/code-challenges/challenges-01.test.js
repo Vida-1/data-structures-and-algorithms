@@ -7,21 +7,17 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
-let arr1Challenge1 = [5, 7, 11, 14, 18, 34];
+
 let arr2Challenge1 = [];
 
-const addOne = (arr1Challenge1) => {
-
-  arr1Challenge1.forEach((value, idx) => {
+const addOne = (arr) => {
+  arr = [5, 7, 11, 14, 18, 34];
+  arr.forEach((value, idx) => {
     arr2Challenge1.push(value + 1)
   })
   return arr2Challenge1;
 };
-
-addOne(arr1Challenge1);
-
-console.log(`Challenge #1: ` + arr2Challenge1);
-//console.log(`Challenge #1: ` + addOne(arr2Challenge1));
+console.log(`Challenge #1: ` + addOne(arr2Challenge1));
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,12 +63,7 @@ const allUpperCase = (arr1Challenge3) => {
   return arr2Challenge3;
 };
 
-//allUpperCase(arr1Challenge3);
-
 console.log(`Challenge #3: ` + allUpperCase(arr1Challenge3));
-
-// console.log(`Challenge #3: ` + arr2Challenge3);
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
