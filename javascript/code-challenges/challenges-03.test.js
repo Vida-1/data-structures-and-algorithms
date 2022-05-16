@@ -72,7 +72,7 @@ const containsAnd = (arr) => {
 containsAnd(testArray3);
 console.log(`Challenge 3-3: ` + containsAnd(testArray3));
 
-
+// just a comment to generate a new PR
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
