@@ -8,14 +8,26 @@ body {
 
 header {
   background-color: grey;
-  padding: 10px 20px;
-  display: flexbox;
+  padding: 10px 20px 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
-img {
-  align: center;
-  width: max-content;
-  margin-left: 4em;
+#headerDiv {
+  display: inline-flex;
+  align-self: center;
+}
+
+#vida {
+  margin-left: 0;
+}
+
+h1 {
+  text-align: center;
+  justify-content: center;
+  padding: 0.25em;
+  ;
 }
 
 main {
