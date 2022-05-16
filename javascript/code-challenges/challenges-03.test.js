@@ -5,19 +5,18 @@ CHALLENGE 1 - Review
 
 Write a function called addTwo that takes in an array and adds two to every value using a for loop. Place the new value in a new array. Return the new array.
 ------------------------------------------------------------------------------------------------ */
-
-let arrNew = [];
+let testArray = [8, 18, 28, 38];
 
 const addTwo = (arr) => {
-  arr = [8, 18, 28, 38];
+  let arrNew = [];
   for (let i = 0; i < arr.length; i++) {
     arrNew.push(arr[i] + 2);
   }
   return arrNew;
 };
 
-addTwo();
-console.log(`Challenge 3-1: ` + arrNew);
+addTwo([1, 2, 4]);
+console.log(`Challenge 3-1: ` + addTwo([1, 2, 4]));
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -31,13 +30,23 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 let testarr = ['TOS', 80, 'TAS', 22, 'TNG', 178];
 
 const typeNum = (arr) => {
-  let nonNums = arr.filter((value, idx) => {
-    return !isNaN(value);
-  });
+  let nonNums = arr.filter(value => !isNaN(value));
+  console.log(`Challenge 3-2: ` + nonNums);
   return nonNums;
 };
+typeNum(testarr);
+//console.log(`Challenge 3-2: ` + typeNum(testarr));
 
-console.log(`Challenge 3-2: ` + typeNum(testarr));
+// let testarr = ['TOS', 80, 'TAS', 22, 'TNG', 178];
+
+// const typeNum = (arr) => {
+//   let nonNums = arr.filter((value, idx) => {
+//     return !isNaN(value);
+//   });
+//   return nonNums;
+// };
+
+// console.log(`Challenge 3-2: ` + typeNum(testarr));
 // I figured out this solution but I don't understand why two return statements are necessary in the code above. -VP
 
 
@@ -360,3 +369,4 @@ xdescribe('Testing challenge 9', () => {
     expect(evenOddNumericValues(['1', 2, 3, '4', 5, '6'])).toStrictEqual(['even', 'odd', 'odd']);
 
   });
+});
