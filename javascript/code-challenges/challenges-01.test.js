@@ -7,17 +7,17 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
+let anArray = [5, 7, 11, 14, 18, 34];
 
-let arr2Challenge1 = [];
 
 const addOne = (arr) => {
-  arr = [5, 7, 11, 14, 18, 34];
+  let newArray = [];
   arr.forEach((value, idx) => {
-    arr2Challenge1.push(value + 1)
+    newArray.push(value + 1)
   })
-  return arr2Challenge1;
+  return newArray;
 };
-console.log(`Challenge #1: ` + addOne(arr2Challenge1));
+console.log(`Challenge #1: ` + addOne(anArray));
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,9 +28,10 @@ Write a function named `addExclamation` that takes an array of strings, and retu
 Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
 let arr1Challenge2 = [`John`, 'Just', 'Jumped'];
-let arr2Challenge2 = [];
+
 
 const addExclamation = (arr1Challenge2) => {
+  let arr2Challenge2 = [];
   arr1Challenge2.forEach((value, idx) => {
     arr2Challenge2.push(value + `!`)
   })
@@ -39,9 +40,9 @@ const addExclamation = (arr1Challenge2) => {
 
 addExclamation(arr1Challenge2);
 
-console.log(`Challenge #2: ` + arr2Challenge2);
+//console.log(`Challenge #2: ` + arr2Challenge2);
 
-//console.log(`Challenge #2: ` + addExclamation(arr1Challenge2));
+console.log(`Challenge #2: ` + addExclamation(arr1Challenge2));
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,9 +54,10 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 let arr1Challenge3 = ['andorians', 'klingons', 'bajorans'];
-let arr2Challenge3 = [];
+
 
 const allUpperCase = (arr1Challenge3) => {
+  let arr2Challenge3 = [];
   arr1Challenge3.forEach((value, idx) => {
     //   console.log(value);
     arr2Challenge3.push(value.toUpperCase())
@@ -71,10 +73,10 @@ CHALLENGE 4
 
 /* Part 1: Write a function named `greeting` that takes in a single string and returns the string in all uppercase letters, and followed by an "!".*/
 
-let word = 'Hello';
+let word = '!';
 
 const greeting = (word) => {
-  return (word.toUpperCase() + '!');
+  return (word.toUpperCase());
 };
 
 greeting(word);
@@ -82,19 +84,19 @@ greeting(word);
 
 /* Part 2: Then, write a function named `speaker` that takes in an array of strings and a callback function. Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. */
 
-let names = ['Rayna Kapec', 'Zhat Vash', 'Kasidy Yates', 'Michael Sullivan'];
-let arrNew = [];
+let people = ['i', 'love', 'dogs'];
 
 const speaker = (names, callback) => {
+  let arrNew = [];
   names.forEach((name, idx) => {
-    arrNew.push(name + `, ` + callback(word))
+    arrNew.push(name.toUpperCase() + callback(word)) //per the test criteria the whole thing should be uppercased not just the first part
   });
   //  console.log(arrNew);
   return arrNew;
 };
 
-speaker(names, greeting);
-console.log(`Challenge #4: ` + arrNew);
+speaker(people, greeting);
+console.log(`Challenge #4: ` + speaker(people, greeting));
 
 /*
 ------------------------------------------------------------------------------------------------ */
