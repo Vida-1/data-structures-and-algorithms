@@ -25,7 +25,7 @@ function lower(str) {
 const updateAnimal = (arr, callback) => {
   let newArray = [];
 
-  return;
+  return newArray;
 };
 
 updateAnimal(testArray1, upper, lower);
@@ -38,11 +38,14 @@ Write a function called sortNames that takes an array of names and sorts them al
 
 For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
+let exArray1 = [cat, Dog, monkey, Panther];
 
 const sortNames = (arr) => {
-  // Solution code here...
+  let newArray = [];
+  arr.sort(A > a && a > b);
+  return newArray;
 };
-
+console.log(`Challenge 4-2: `, sortNames(exArray1));
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
