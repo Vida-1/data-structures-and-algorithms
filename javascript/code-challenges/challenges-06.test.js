@@ -14,18 +14,11 @@ For example:
 Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
-let testArray = ['sean', 'bean'];
+// solution composed by Sheyna Watkins during lecture
 
 const getNames = (arr) => {
-  arr.foreach((value, idx) => {
-    value.map(a > b);
-  })
-  return arr;
+  return arr.map(person => person.name.split('').reverse().join(''))
 };
-
-getNames(testArray);
-
-console.log(`Challenge 6-1: ` + getNames(testArray));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -35,7 +28,8 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 ------------------------------------------------------------------------------------------------ */
 
 const appendTheEnd = (str) => {
-  // Solution code here...
+  let newStr = str.concat(' The end.');
+  return newStr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,7 +46,7 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  // Solution code here...
+  arr.push(arr[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,9 +64,17 @@ addBirthYearProperty(octavia, 1947);
 console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
-const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
+const octavia = {
+  fullName: 'Octavia Estelle Butler'
 };
+
+const addBirthYearProperty = (obj, year) => {
+  let newObj = Object.assign(obj, { yearBorn: year });
+  return newObj;
+}
+
+addBirthYearProperty(octavia, 1947);
+console.log(addBirthYearProperty(octavia, 1947));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
