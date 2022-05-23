@@ -43,10 +43,12 @@ Write a function called sortNames that takes an array of names and sorts them al
 
 For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
+
 let captains = ['Janeway', 'kirk', 'Georgiou', 'sisko', 'picard', 'Burnham', 'archer', 'Pike'];
 
 const sortNames = (arr) => { return arr.sort() };
 console.log('Challenge 4-2: ' + sortNames(captains));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
