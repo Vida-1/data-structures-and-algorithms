@@ -1,5 +1,7 @@
 'use strict';
 
+const { getAttributeValue } = require("domutils");
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
@@ -12,24 +14,27 @@ Push each updated animal string into the new array. Return the new array.
 HINT: Look at the tests to see how the callback functions are used.
 
 ------------------------------------------------------------------------------------------------ */
-let testArray1 = ['llama', 'dog', 'horse', 'racoon', 'opposum', 'fox', 'dingo', 'wolf'];
+let testArray1 = ['targ', 'tribble', 'Sehlat', 'tardigrade', 'Nesset'];
 
 function upper(str) {
   return str.toUpperCase();
-}
+};
 
 function lower(str) {
   return str.toLowerCase();
-}
-
-const updateAnimal = (arr, callback) => {
-  let newArray = [];
-
-  return newArray;
 };
 
-updateAnimal(testArray1, upper, lower);
-console.log(`Challenge 4-1: ` + updateAnimal(testArray1));
+const updateAnimal = ((arr, callback) => {
+  let newArray1 = [];
+  // arr.forEach(value => {
+  //   callback(value)
+  // });
+  // return newArray1.push(lower(value));
+  
+});
+
+updateAnimal(testArray1, upper(testArray1));
+console.log('Challenge 4-1: ' + updateAnimal(testArray1, upper(testArray1)));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -38,14 +43,13 @@ Write a function called sortNames that takes an array of names and sorts them al
 
 For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
-let exArray1 = [cat, Dog, monkey, Panther];
 
-const sortNames = (arr) => {
-  let newArray = [];
-  arr.sort(A > a && a > b);
-  return newArray;
-};
-console.log(`Challenge 4-2: `, sortNames(exArray1));
+let captains = ['Janeway', 'kirk', 'Georgiou', 'sisko', 'picard', 'Burnham', 'archer', 'Pike'];
+
+const sortNames = (arr) => { return arr.sort() };
+console.log('Challenge 4-2: ' + sortNames(captains));
+
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -53,11 +57,15 @@ Write a function called sortNumbers that takes an array of numbers and sorts the
 
 HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
+let testArray3 = [8, 3, 2, 9, 12, 1, 115];
 
 const sortNumbers = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    return a - b;
+  });
 };
 
+console.log('Challenge 4-3: ' + sortNumbers(testArray3));
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -65,10 +73,16 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 
 HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
+let testArray4 = [9, 4, 3, 10, 13, 2, 116];
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    return b - a;
+  });
+
 };
+
+console.log('Challenge 4-4: ' + sortBackwards(testArray4));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -80,9 +94,8 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => {
-  // Solution code here...
-};
+const alphabetize = (arr) => { return arr.sort() };
+console.log('Challenge 4-5: ' + alphabetize(captains));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -96,10 +109,36 @@ Here is an example of the input:
   {name: 'Tote bag', price: 15}
 ];
 ------------------------------------------------------------------------------------------------ */
+let drinkMenu = [
+  { drink: 'Romulan ale', price: 85, currency: 'GPL slips' },
+  { drink: 'Blood wine', price: 50, currency: 'GPL slips' },
+  { drink: 'Tranya', price: 40, currency: 'GPL slips' }]
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    return (a.price - b.price);
+  });
 };
+sortByPrice(drinkMenu);
+console.log('Challenge 4-6: ' + sortByPrice(drinkMenu));
+
+
+// 2nd method
+// const sortByPrice = (arr) => {
+//   let newArray = [];
+//   newArray = drinkMenu.sort((a, b) => { a.price < b.price ? 1 : -1 });
+//   return newArray;
+// };
+// sortByPrice(drinkMenu);
+
+// console.log('Challenge 4-6: ' + sortByPrice(drinkMenu));
+
+// //method 3
+// const sortByPrice = (arr) => {
+//   drinkMenu.sort((a, b) => { a.price - b.price ? 1 : -1 });
+// };
+// sortByPrice(drinkMenu);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
