@@ -1,6 +1,6 @@
 'use strict';
 
-const { getAttributeValue } = require("domutils");
+// const { getAttributeValue } = require("domutils");
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
@@ -14,7 +14,8 @@ Push each updated animal string into the new array. Return the new array.
 HINT: Look at the tests to see how the callback functions are used.
 
 ------------------------------------------------------------------------------------------------ */
-let testArray1 = ['targ', 'tribble', 'Sehlat', 'tardigrade', 'Nesset'];
+
+// ok, so what I want to happen is first take the array and make everything uppercase and shove that into a new array. Then I want to iterate over that new array and return it in all lower case letters. Note the test is looking for upper then lower.
 
 function upper(str) {
   return str.toUpperCase();
@@ -24,17 +25,26 @@ function lower(str) {
   return str.toLowerCase();
 };
 
-const updateAnimal = ((arr, callback) => {
-  let newArray1 = [];
-  // arr.forEach(value => {
-  //   callback(value)
-  // });
-  // return newArray1.push(lower(value));
-  
-});
+let testArray1 = ['targ', 'trIBBle', 'Sehlat', 'tardIgrade', 'Nesset'];
 
-updateAnimal(testArray1, upper(testArray1));
-console.log('Challenge 4-1: ' + updateAnimal(testArray1, upper(testArray1)));
+// Attribution: This solution was completed with help from my sister who found and explained the syntax and structure issues that were breaking things!
+
+const updateAnimal = (arr, callback) => {
+  let newArray1 = [];
+
+  for (let i = 0; i < arr.length; i++) {  // no parens on .length() here; think property, not function (infinitive form of the verb) -my broke brain mnemonic
+    newArray1.push(callback(arr[i]));    // Reminder: use the argument name, not the function name
+  }
+  return newArray1;
+};
+
+// const doSomeStuff = (bigNumber, smallNumber) => { return bigNumber / smallNumber }
+// const doMoreStuff = () => { }
+
+console.log(updateAnimal(testArray1, upper));             //Reminder: don't use the parenthesis on the callback function here. Pass in the function (don't "do" the function with some specific deets; don't worry about the deets, you'll find out when you get there!)
+console.log(updateAnimal(testArray1, lower));
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
