@@ -15,7 +15,6 @@ HINT: Look at the tests to see how the callback functions are used.
 
 ------------------------------------------------------------------------------------------------ */
 
-// ok, so what I want to happen is first take the array and make everything uppercase and shove that into a new array. Then I want to iterate over that new array and return it in all lower case letters. Note the test is looking for upper then lower.
 
 function upper(str) {
   return str.toUpperCase();
