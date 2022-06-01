@@ -11,9 +11,21 @@ should convert to ["Jane Doe", "James Bond"]
 Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
+// let capArray = [
+//   { firstName: "Christopher", lastName: "Pike" },
+//   { firstName: "James", lastName: "Kirk" },
+//   { firstName: "Jean-Luc", lastName: "Picard" },
+//   { firstName: "Benjamin", lastName: "Sisko" },
+//   { firstName: "Kathryn", lastName: "Janeway" },
+//   { firstName: "Jonathan", lastName: "Archer" },
+//   { firstName: "Phillipa", lastName: "Georgiou" }
+// ];
+
 const toLastNames = people => {
-  // Solution code here...
+  return people.map(person => person.firstName + ' ' + person.lastName);
 };
+
+// console.log(`Mellow greetings ${toLastNames(capArray)}`);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -23,8 +35,12 @@ Write a function named addValues that, given an array of numbers as input, uses 
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr) => {
-  // Solution code here...
+  return arr.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+  }, 0);
 };
+
+//console.log(addValues([1, 2, 3, 4, 5]));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -38,9 +54,24 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 ------------------------------------------------------------------------------------------------ */
 
-const addPurchases = (arr) => {
-  // Solution code here...
+// function addPurchases(arr) {
+//   return arr.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+//   }, 0);
+// }
+
+let array = [
+  { item: 'switch', purchasePrice: 399 },
+  { item: 'toothpaste', purchasePrice: 2 }
+];
+
+function addPurchases(arr) {
+  return arr.reduce((acc, currentValue) => {
+    return acc + currentValue.purchasePrice;
+  }, 0);
 };
+
+// addPurchases(array);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -51,8 +82,11 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+  return arr.reduce((accumulator, currentValue) => {
+    return accumulator + 1;
+  }, 0);
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -111,9 +145,14 @@ let starWarsData = [{
   gender: 'female'
 }];
 
+// Attribution: Based on solution demo'd by Sheyna Watkins in class lecture 
 const returnNames = (arr) => {
-  // Solution code here...
+  return arr.reduce((newArr, current) => {
+    newArr.push(current.name);
+    return newArr;
+  }, []);
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -123,12 +162,12 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (str) => {
-  let string = str.split('');
-  string.reduce()
-};
+//const reversedString = (str) => {
+// let string = str.split('');
+// string.reduce()
+//};
 
-// other option code provided by Instructor during class lecture
+// other option code provided by Instructor (Sheyna) during class lecture
 
 const reversedString = (str) => {
   return str.split('').reduce((accumulator, current) => {
@@ -136,15 +175,15 @@ const reversedString = (str) => {
   }, "");
 };
 
-// other option code provided by Instructor during class lecture
+// other option code provided by Instructor (Sheyna) during class lecture
 
-const reversedString = (str) => {
-  return str.split('').reduce((accumulator, current) => {
-    let newVal = current + accumulator;
-    console.log(newVal);
-    return newVal;
-  }, "");
-};
+// const reversedString = (str) => {
+//   return str.split('').reduce((accumulator, current) => {
+//     let newVal = current + accumulator;
+//     console.log(newVal);
+//     return newVal;
+//   }, "");
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -285,9 +324,9 @@ Write a function named extractChildren that, given the array of characters from 
 2) Then, uses reduce to return an array of all the children's names in the filtered array
 ------------------------------------------------------------------------------------------------ */
 
-const extractChildren = (arr) => {
-  // Solution code here...
-};
+// const extractChildren = (arr) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
