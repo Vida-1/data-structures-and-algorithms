@@ -122,6 +122,7 @@ const gruffaloCrumble = {
   ],
 };
 
+// Attribution: code review in class
 
 const listFoods = (recipe) => {
   let result = [];
