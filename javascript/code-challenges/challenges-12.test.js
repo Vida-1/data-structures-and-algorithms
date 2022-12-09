@@ -1,48 +1,54 @@
 'use strict';
 
-//NOTE & ATTRIBUTION: I don't know why but all of my code challenge files from Challenge 9 to 15 vanished and/or never populated when I did a git pull from origin main. I copied the contents of this file from another 301 student's repo (bradydavenport) and deleted out his solutions so that I can try to noodle them out on my own. I will do the same for Challenges 10-15.
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
+
 Write a function named replaceZeros that, given a string, uses Regex to replace all '0' with the word 'zero'.
 ------------------------------------------------------------------------------------------------ */
 
 const replaceZeros = (string) => {
-
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
+
 Write a function named validatePin that uses a regular expression pattern to validate a PIN.
+
 If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
-
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
+
 Write a function named validateWord that uses a regular expression pattern to validate that a word is between 5 and 10 characters long.
+
 If the word is between 5 and 10 characters long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validateWord = (word) => {
-
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
+
 Write a function named hasNumber that uses a regular expression pattern to determine if a string has one or more letter followed by one or more digit.
+
 If it does, return true. If not, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const hasNumber = (string) => {
-
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
+
 Write a function named validateEmail that takes in an email address and validates it based
 on several rules:
   - one word, or two words separated by a period, before the @ symbol
@@ -50,17 +56,21 @@ on several rules:
   - can have any of the following top-level domains: .net, .com, or .org
   - no other special characters
   - no subdomains, ports, etc: must be of the form name@place.com, not name@sub.place.com:3000
+
 Return either true or false.
+
 Note: if you ever need to validate an email using a regex in practice, the Internet has the actual regex you should use. It's many many lines long.
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
+
 Write a function named validatePhoneNumber that accepts a phone number and determines if it is valid.
+
 Acceptable formats include:
  - (555) 555-5555
  - (555)555 5555
@@ -71,17 +81,21 @@ Acceptable formats include:
  - 555 555 5555
  - 555555-5555
  - 5555555555
+
 Your function should include a single regular expression pattern that matches any of these formats.
+
 Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
+
 Write a function named findTagNames that iterates over an array of HTML strings and uses a regular expression pattern to return the closing tags.
+
 For example, findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>']) returns ['/h1', '/p'].
 findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>']) returns ['/h1', '/div', '/p'].
 ------------------------------------------------------------------------------------------------ */
@@ -92,8 +106,11 @@ const findTagNames = elements => {
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
+
 All the code below will verify that your functions are working to solve the challenges.
+
 DO NOT CHANGE any of the below code.
+
 Run your tests from the console: jest solutions-11.test.js
 ------------------------------------------------------------------------------------------------ */
 
