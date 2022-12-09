@@ -38,4 +38,4 @@ challenge2Whiteboard.jpg
 Link to an image of the UML for your application and response to events
 
 ## Approach & Efficiency
-There were a total of two inputs for this project with one simple output; assuming a Big O efficiency of O(N^2). 
+There were a total of two inputs for this project with one simple output; assuming a Big O efficiency of O(N^2).  
