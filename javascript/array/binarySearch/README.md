@@ -2,7 +2,7 @@
 Feature Task: Write a function called binarySearch which takes an array and a search key as arguments. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the value of the search key, or -1 if the element is not in the array.
 
 ## Whiteboard Process
-![Whiteboard](CodeChallenge03_Whiteboard.jpg)
+![Whiteboard](/javascript/array/binarySearch/CodeChallenge%2003_Whiteboard.jpg)
 
 ## Approach & Efficiency
 _What approach did you take? Discuss Why. What is the Big O space/time for this approach?_
