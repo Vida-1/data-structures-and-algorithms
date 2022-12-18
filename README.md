@@ -22,7 +22,7 @@ To run your tests
 
 #### 401 Table of Contents
 1. Code Challenge 01 - [reverseArray (README)]()
-2. Code Challenge 02 - [insertShiftArray (README)]()
+2. Code Challenge 02 - [insertShiftArray (README)](/javascript/array/insertShiftArray/README.md )
 3. Code Challenge 03 - [BinarySearch (README)]()
 4. Code Challenge 04 - [Mock Interviews (README)]()
 5. Code Challenge 05 - Coming soon!
