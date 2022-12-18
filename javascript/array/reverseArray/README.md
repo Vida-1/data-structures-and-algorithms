@@ -5,4 +5,4 @@ Write a function called reverseArray which takes an array as an argument. Withou
 ![Whiteboard 01](/javascript/array/reverseArray/Whiteboard01Powell.jpg)
 
 ## Approach & Efficiency
-I approached this challenge with a for loop over the length of an array as this seemed the most direct method within my skillset.
+I approached this challenge with a for loop over the length of an array as this seemed the most direct method within my skillset. 
