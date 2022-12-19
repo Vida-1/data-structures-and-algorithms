@@ -5,6 +5,7 @@ CHALLENGE 1 - Review
 
 Write a function called addTwo that takes in an array and adds two to every value using a for loop. Place the new value in a new array. Return the new array.
 ------------------------------------------------------------------------------------------------ */
+
 let testArray = [8, 18, 28, 38];
 
 const addTwo = (arr) => {
@@ -35,6 +36,7 @@ const typeNum = (arr) => {
   return nonNums;
 };
 typeNum(testarr);
+
 //console.log(`Challenge 3-2: ` + typeNum(testarr));
 
 // let testarr = ['TOS', 80, 'TAS', 22, 'TNG', 178];
@@ -48,8 +50,6 @@ typeNum(testarr);
 
 // console.log(`Challenge 3-2: ` + typeNum(testarr));
 // I figured out this solution but I don't understand why two return statements are necessary in the code above. -VP
-
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -67,12 +67,9 @@ const containsAnd = (arr) => {
   });
   return haveAnd;
 };
-
-
 containsAnd(testArray3);
 console.log(`Challenge 3-3: ` + containsAnd(testArray3));
 
-// just a comment to generate a new PR
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -110,10 +107,7 @@ const notInFirstArray = (forbiddenValues, arr) => {
   console.log(`Challenge 3-5: ` + inSecondNotInFirst);
   return inSecondNotInFirst;
 };
-
 notInFirstArray(testArr5a, testArr5b);
-
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
@@ -161,7 +155,7 @@ const getBaseStatGreaterThan = (arr, minBaseStat) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
-Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 7. For this function, extend your solution from challenge 7 to only return the name of the stat, rather than the entire stat object.
+Write a function named getStatName that is an extension of your getBaseStatGreaterThan function from challenge 6. For this function, extend your solution from challenge 6 to only return the name of the stat, rather than the entire stat object.
 
 For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 'special-attack'].
 ------------------------------------------------------------------------------------------------ */
@@ -264,9 +258,7 @@ describe('Testing challenge 2', () => {
 describe('Testing challenge 3', () => {
   test('It should return an array of strings containing the word and', () => {
     expect(containsAnd(['panda', 'ran', 'and'])).toStrictEqual(['panda', 'and']);
-
-    expect(containsAnd(['banana', 'bob', 'xyz'])).toStrictEqual([]);
-
+    expect(containsAnd(['banana','bob','xyz'])).toStrictEqual([]);
     expect(containsAnd([])).toStrictEqual([]);
     expect(containsAnd(['and', 'sand'])).toStrictEqual(['and', 'sand']);
   });
@@ -276,10 +268,8 @@ describe('Testing challenge 4', () => {
   test('It should return an array containing only odd integers', () => {
     expect(oddValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toStrictEqual([1, 3, 5, 7, 9]);
     expect(oddValues([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).length).toStrictEqual(5);
-
-    expect(oddValues([2, 3, 4, 179])).toStrictEqual([3, 179]);
-    expect(oddValues([2, 4, 6, 8])).toStrictEqual([]);
-
+    expect(oddValues([2,3,4,179])).toStrictEqual([3,179]);
+    expect(oddValues([2,4,6,8])).toStrictEqual([]);
   });
 });
 
@@ -302,33 +292,25 @@ describe('Testing challenge 5', () => {
 
   test('It should work with empty arrays', () => {
     expect(notInFirstArray([], [])).toStrictEqual([]);
-
-    expect(notInFirstArray([], [1, 2, 3, 4, 5])).toStrictEqual([1, 2, 3, 4, 5]);
-    expect(notInFirstArray([1, 2, 3, 4, 5], [])).toStrictEqual([]);
-
+    expect(notInFirstArray([], [1,2,3,4,5])).toStrictEqual([1,2,3,4,5]);
+    expect(notInFirstArray([1,2,3,4,5], [])).toStrictEqual([]);
   });
 });
 
 xdescribe('Testing challenge 6', () => {
   test('It should return an array containing the stats that are greater than the input', () => {
-
-    expect(getBaseStatGreaterThan(snorlaxData.stats, 75)).toStrictEqual([{ stat: { url: 'https://pokeapi.co/api/v2/stat/5/', name: 'special-defense' }, effort: 2, baseStat: 110 }]);
-
+    expect(getBaseStatGreaterThan(snorlaxData.stats, 75)).toStrictEqual([ { stat: { url: 'https://pokeapi.co/api/v2/stat/5/', name: 'special-defense' }, effort: 2, baseStat: 110 } ]);
     expect(getBaseStatGreaterThan(snorlaxData.stats, 75).length).toStrictEqual(1);
     expect(getBaseStatGreaterThan(snorlaxData.stats, 110)).toStrictEqual([]);
   });
   test('It should work for non-Snorlax data', () => {
-
-    expect(getBaseStatGreaterThan([{ baseStat: 10 }, { baseStat: -85 }, { baseStat: 0 }, { baseStat: -50 }], -60)).toStrictEqual([{ baseStat: 10 }, { baseStat: 0 }, { baseStat: -50 }]);
-
+    expect(getBaseStatGreaterThan([{baseStat: 10}, {baseStat: -85}, {baseStat: 0}, {baseStat: -50}], -60)).toStrictEqual([{baseStat: 10}, {baseStat: 0}, {baseStat: -50}]);
   });
 });
 
 xdescribe('Testing challenge 7', () => {
   test('It should return the name of the stats that exceed that maximum', () => {
-
-    expect(getStatName(snorlaxData.stats, 50)).toStrictEqual(['special-defense', 'special-attack']);
-
+    expect(getStatName(snorlaxData.stats, 50)).toStrictEqual([ 'special-defense', 'special-attack' ]);
     expect(getStatName(snorlaxData.stats, 50).length).toStrictEqual(2);
   });
 
@@ -339,21 +321,17 @@ xdescribe('Testing challenge 7', () => {
 
   test('It should work for non-snorlax data', () => {
     expect(getStatName([
-
-      { baseStat: 10, stat: { name: 'one' } },
-      { baseStat: -85, stat: { name: 'two' } },
-      { baseStat: 0, stat: { name: 'three' } },
-      { baseStat: -50, stat: { name: 'four' } }
-
+      {baseStat: 10, stat: {name: 'one'}},
+      {baseStat: -85, stat: {name: 'two'}},
+      {baseStat: 0, stat: {name: 'three'}},
+      {baseStat: -50, stat: {name: 'four'}}
     ], -60)).toStrictEqual(['one', 'three', 'four']);
   });
 });
 
 xdescribe('Testing challenge 8', () => {
   test('It should return an array containing characters who do not have children', () => {
-
-    expect(getCharactersWithoutChildren(characters)).toStrictEqual([{ name: 'Sansa', spouse: 'Tyrion', house: 'Stark' }, { name: 'Jon', spouse: null, house: 'Snow' }]);
-
+    expect(getCharactersWithoutChildren(characters)).toStrictEqual([ { name: 'Sansa', spouse: 'Tyrion', house: 'Stark' }, { name: 'Jon', spouse: null, house: 'Snow' } ]);
     expect(getCharactersWithoutChildren(characters).length).toStrictEqual(2);
   });
 });
@@ -365,8 +343,6 @@ xdescribe('Testing challenge 9', () => {
     expect(evenOddNumericValues(['a', 'b', 'c'])).toStrictEqual([]);
   });
   test('It should not accept strings that look like numbers', () => {
-
-    expect(evenOddNumericValues(['1', 2, 3, '4', 5, '6'])).toStrictEqual(['even', 'odd', 'odd']);
-
+    expect(evenOddNumericValues(['1', 2, 3, '4', 5,'6'])).toStrictEqual(['even', 'odd', 'odd']);
   });
 });

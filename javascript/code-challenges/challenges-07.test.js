@@ -24,9 +24,12 @@ let starWarsPeople = [
   },
 ];
 
-const sortStarWarsCharacters = (starWarsArr) => {
-  // Solution code here...
-};
+const sortStarWarsCharacters = ((starWarsArr) => {
+  return starWarsArr.sort((a, b) => {
+    return b.height - a.height
+  });
+});
+// Attribution: Basis for the above solution provided by: https://indefiniteloop.com/blog/code/sorting-using-arrow-functions-javascript.html
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -34,9 +37,11 @@ CHALLENGE 2
 Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index.
 ------------------------------------------------------------------------------------------------ */
 
-const removeThree = (idx, arr) => {
-  // Solution code here...
-};
+let removeThree = ((index, arr) => {
+  arr.splice(index, 3);
+  return arr;
+});
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -44,9 +49,9 @@ CHALLENGE 3
 Write a function named joinArray that takes an array and joins all of the elements together in one string on a space.
 ------------------------------------------------------------------------------------------------ */
 
-const joinArray = (arr) => {
-  // Solution code here...
-};
+  function joinArray(arr) {
+    return arr.join(' ');
+  }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -61,13 +66,14 @@ For example, if the input is 'Welcome', the output will be:
 ['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', ''].
 ------------------------------------------------------------------------------------------------ */
 
-const howMuchPencil = (str) => {
-  let result = [];
-  for (let i = 0; i < str.length + 1; i++){
-  //  result = 
-  }
-  return result;
-};
+const howMuchPencil = ((str) => {
+  let solutionArray = [];
+
+  for (let i = 0; i < (str.length + 1); i++){
+    solutionArray.push(str.slice(i));
+  };
+  return solutionArray;
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -77,9 +83,15 @@ Write a function name wordsToCharList that, given a string as input, returns a n
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
-const wordsToCharList = (arr) => {
-  // Solution code here...
-};
+
+const wordsToCharList = ((str) => {
+  let stringToArray = [];
+
+  for (let i = 0; i < (str.length); i++){
+    stringToArray.push(str.charAt(i));
+  };
+  return stringToArray;
+});
 
 
 /* ------------------------------------------------------------------------------------------------
