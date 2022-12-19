@@ -35,6 +35,7 @@ const typeNum = (arr) => {
   return nonNums;
 };
 typeNum(testarr);
+
 //console.log(`Challenge 3-2: ` + typeNum(testarr));
 
 // let testarr = ['TOS', 80, 'TAS', 22, 'TNG', 178];
