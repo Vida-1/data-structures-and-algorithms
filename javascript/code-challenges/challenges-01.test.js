@@ -7,18 +7,10 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
-let anArray = [5, 7, 11, 14, 18, 34];
-
 
 const addOne = (arr) => {
-  let newArray = [];
-  arr.forEach((value, idx) => {
-    newArray.push(value + 1)
-  })
-  return newArray;
+  // Solution code here...
 };
-console.log(`Challenge #1: ` + addOne(anArray));
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -27,23 +19,10 @@ Write a function named `addExclamation` that takes an array of strings, and retu
 
 Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
-let arr1Challenge2 = [`John`, 'Just', 'Jumped'];
 
-
-const addExclamation = (arr1Challenge2) => {
-  let arr2Challenge2 = [];
-  arr1Challenge2.forEach((value, idx) => {
-    arr2Challenge2.push(value + `!`)
-  })
-  return arr2Challenge2;
+const addExclamation = (arr) => {
+  // Solution code here...
 };
-
-addExclamation(arr1Challenge2);
-
-//console.log(`Challenge #2: ` + arr2Challenge2);
-
-console.log(`Challenge #2: ` + addExclamation(arr1Challenge2));
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -53,53 +32,27 @@ Write a function named `allUpperCase` that takes an array of strings, and return
 Use `forEach` to loop over the input array. The modified strings should each be added into a local array. Return that local array.
 ------------------------------------------------------------------------------------------------ */
 
-let arr1Challenge3 = ['andorians', 'klingons', 'bajorans'];
-
-
-const allUpperCase = (arr1Challenge3) => {
-  let arr2Challenge3 = [];
-  arr1Challenge3.forEach((value, idx) => {
-    //   console.log(value);
-    arr2Challenge3.push(value.toUpperCase())
-  });
-  return arr2Challenge3;
+const allUpperCase = (arr) => {
+  // Solution code here...
 };
-
-console.log(`Challenge #3: ` + allUpperCase(arr1Challenge3));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
+Write a function named `greeting` that takes in a single string and returns the string in all uppercase letters, and followed by an "!".
 
-/* Part 1: Write a function named `greeting` that takes in a single string and returns the string in all uppercase letters, and followed by an "!".*/
+Then, write a function named `speaker` that takes in an array of strings and a callback function.
 
-let word = '!';
+Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
+------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  return (word.toUpperCase());
+  // Solution code here...
 };
 
-greeting(word);
-// console.log(`Challenge #4 pt1: ` + greeting(word));
-
-/* Part 2: Then, write a function named `speaker` that takes in an array of strings and a callback function. Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. */
-
-let people = ['i', 'love', 'dogs'];
-
-const speaker = (names, callback) => {
-  let arrNew = [];
-  names.forEach((name, idx) => {
-    arrNew.push(name.toUpperCase() + callback(word)) //per the test criteria the whole thing should be uppercased not just the first part
-  });
-  //  console.log(arrNew);
-  return arrNew;
+const speaker = (words, callback) => {
+  // Solution code here...
 };
-
-speaker(people, greeting);
-console.log(`Challenge #4: ` + speaker(people, greeting));
-
-/*
------------------------------------------------------------------------------------------------- */
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -116,28 +69,20 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
-// Attribution: I didn't understand this question at all, the following solution was presented by Instructor in Class 02.
-let testArray = [];
 
 const addValues = (arr, value) => {
-  arr.push(value);
+  // Solution code here...
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  for (let i = 0; i < times; i++) {
-    callback(arr, num);
-  }
-  console.log(`Challenge #5: ` + arr);
-  return arr;
+  // Solution code here...
 };
-
-addNumbers(4, testArray, 5, addValues);
 
 /* ------------------------------------------------------------------------------------------------
 
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store intentory.
+Write a function named createList that takes in an array of the current store inventory.
 
 The inventory is formatted like this:
 [
@@ -151,28 +96,9 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
-// Attribution: I didn't understand this question at all, the following solution was presented by Instructor in Class 02.
-
-let testArr = [
-  { name: 'apples', available: true },
-  { name: 'pears', available: true },
-  { name: 'oranges', available: false },
-  { name: 'bananas', available: true },
-  { name: 'blueberries', available: false }];
-
 const createList = (availableItems) => {
-  let arr1Challenge6 = [];
-  availableItems.forEach((item) => {
-    if (item.available) {
-      arr1Challenge6.push(item.name);
-    }
-  });
-  console.log(`Challenge #6: ` + arr1Challenge6);
-
-  return arr1Challenge6;
+  // Solution code here...
 };
-
-createList(testArr);
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
