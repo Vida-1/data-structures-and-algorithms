@@ -20,4 +20,9 @@ To run your tests
 
 ### 401 Data Structures, Code Challenges
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+#### 401 Table of Contents
+1. Code Challenge 01 - [reverseArray (README)](/javascript/array/reverseArray/README.md)
+2. Code Challenge 02 - [insertShiftArray (README)](/javascript/array/insertShiftArray/README.md )
+3. Code Challenge 03 - [BinarySearch (README)](/javascript/array/binarySearch/README.md)
+4. Code Challenge 04 - [Mock Interviews (README)]()
+5. Code Challenge 05 - Coming soon!
