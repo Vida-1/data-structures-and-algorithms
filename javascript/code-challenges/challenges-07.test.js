@@ -85,6 +85,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 const wordsToCharList = ((str) => {
   let stringToArray = [];
 
+
   for (let i = 0; i < (str.length); i++){
     stringToArray.push(str.charAt(i));
   };
