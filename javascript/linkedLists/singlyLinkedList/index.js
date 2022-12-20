@@ -46,8 +46,6 @@ class LinkedList {  // create a LinkedList class
   }
 
   
-
-  
   /*  Method: includes
           Arguments: value
           Returns: Boolean
@@ -95,5 +93,8 @@ class LinkedList {  // create a LinkedList class
     return string;
   }
 }
+
+
+// note: methods do not come in a pre-built library for linked-list class.
 
 module.exports = LinkedList;
