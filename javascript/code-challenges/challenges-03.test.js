@@ -6,9 +6,18 @@ CHALLENGE 1 - Review
 Write a function called addTwo that takes in an array and adds two to every value using a for loop. Place the new value in a new array. Return the new array.
 ------------------------------------------------------------------------------------------------ */
 
+let testArray = [8, 18, 28, 38];
+
 const addTwo = (arr) => {
-  // Solution code here...
+  let arrNew = [];
+  for (let i = 0; i < arr.length; i++) {
+    arrNew.push(arr[i] + 2);
+  }
+  return arrNew;
 };
+addTwo([1, 2, 4]);
+console.log(`Challenge 3-1: ` + addTwo([1, 2, 4]));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -18,11 +27,6 @@ Write a function named typeNum that, given an array as input, uses filter to ret
 For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
-const typeNum = (arr) => {
-  // Solution code here...
-};
-
-typeNum(testarr);
 
 //console.log(`Challenge 3-2: ` + typeNum(testarr));
 
@@ -38,7 +42,14 @@ typeNum(testarr);
 // console.log(`Challenge 3-2: ` + typeNum(testarr));
 // I figured out this solution but I don't understand why two return statements are necessary in the code above. -VP
 
+let testarr = ['TOS', 80, 'TAS', 22, 'TNG', 178];
+const typeNum = (arr) => {
+  let nonNums = arr.filter(value => !isNaN(value));
+  console.log(`Challenge 3-2: ` + nonNums);
+  return nonNums;
+};
 
+typeNum(testarr);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -48,8 +59,12 @@ Write a function named containsAnd that, given an array of strings as input, use
 For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
+let testArray3 = ['Norway', 'Iceland', 'Sweden', 'Finland', 'Estonia', 'Poland'];
 const containsAnd = (arr) => {
-  // Solution code here...
+  let haveAnd = arr.filter((value, idx) => {
+    return value.includes("and");
+  });
+  return haveAnd;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,9 +75,15 @@ Write a function named oddValues that, given an array of integers as input, uses
 For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
+let testArray4 = [1, 2, 3, 4, 5, 6, 7, 8];
 const oddValues = (arr) => {
-  // Solution code here...
+  let oddInts = arr.filter((value, idx) => {
+    return (value % 2);
+  });
+  return oddInts;
 };
+oddValues(testArray4);
+console.log(`Challenge 3-4: ` + oddValues(testArray4));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -72,9 +93,16 @@ Write a function named notInFirstArray that, given two arrays as input, uses fil
 For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
+let testArr5a = [10, 20, 30, 40];
+let testArr5b = [5, 10, 15, 20, 25, 30];
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  let inSecondNotInFirst = arr.filter((value, idx) => {
+    return !(forbiddenValues.includes(value));
+  });
+  console.log(`Challenge 3-5: ` + inSecondNotInFirst);
+  return inSecondNotInFirst;
 };
+notInFirstArray(testArr5a, testArr5b);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
