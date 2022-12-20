@@ -25,4 +25,4 @@ To run your tests
 2. Code Challenge 02 - [insertShiftArray (README)](/javascript/array/insertShiftArray/README.md )
 3. Code Challenge 03 - [BinarySearch (README)](/javascript/array/binarySearch/README.md)
 4. Code Challenge 04 - [Mock Interviews (README)]()
-5. Code Challenge 05 - Coming soon!
+5. Code Challenge 05 - [Linked-lists (README)](/javascript/linkedList/singlyLinkedLists/README.md)

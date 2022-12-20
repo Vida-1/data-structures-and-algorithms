@@ -22,6 +22,24 @@ const typeNum = (arr) => {
   // Solution code here...
 };
 
+typeNum(testarr);
+
+//console.log(`Challenge 3-2: ` + typeNum(testarr));
+
+// let testarr = ['TOS', 80, 'TAS', 22, 'TNG', 178];
+
+// const typeNum = (arr) => {
+//   let nonNums = arr.filter((value, idx) => {
+//     return !isNaN(value);
+//   });
+//   return nonNums;
+// };
+
+// console.log(`Challenge 3-2: ` + typeNum(testarr));
+// I figured out this solution but I don't understand why two return statements are necessary in the code above. -VP
+
+
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
