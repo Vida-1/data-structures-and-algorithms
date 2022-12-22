@@ -53,7 +53,7 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-
+  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -62,13 +62,12 @@ CHALLENGE 2
 Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
 
 ------------------------------------------------------------------------------------------------ */
-let regex = /[w]/gm;
-
+// this solution came from the Code Fellows Shred Talk on Regular Expressions 1
+  
 const containsW = (str) => {
-  let hasPattern = regex.test(str);
-  return hasPattern;
+  let validator = /w/g;
+  return validator.test(str);
 };
-console.log(containsW(regex));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -81,13 +80,11 @@ For example:
 'h3llo world' returns true
 'hello world' returns false
 ------------------------------------------------------------------------------------------------ */
-let regex3 = /\d/gm
 
 const isNum = (input) => {
-  let hasPattern = regex.test(str);
-  return hasPattern;
+    let validator = /[0-9]/g;
+  return validator.test(input);
 };
-console.log(isNum(regex3));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -97,7 +94,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+    let validator = /world/g;
+  return validator.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -107,25 +105,40 @@ Write a function named isCapitalized that takes in a string. This function shoul
 
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
+// Solution Version 1: works fine in Replit but doesn't pass the test here
 
-const isCapitalized = (str) => {
-  // Solution code here...
-};
+let cities = "Canada brazil barbados Haiti spain Morocco sweden Norway";
+
+const isCapitalized = ((str) => {
+  let capCities = /\b[A-Z][a-z]*/g;
+  return str.match(capCities);
+//  return console.log(str.match(capCities));
+});
+
+// Solution Version 2:  the return on the str.match method appears to be an array so it seems adding an array push would be redundant but I'm trying that below anyway:
+
+// const isCapitalized = ((str) => {
+//   let newArray = [];
+//   let capCities = /\b[A-Z][a-z]*/g;
+//   newArray.push(str.match(capCities));
+//   return newArray;
+// });
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
-let regex6 = /^[A-J]/gm;
 
-const citiesAtoJ = (arr) => {
-  let hasPattern = [];
-  hasPattern.push(arr.forEach(regex6.test(arr)));
-  return hasPattern;
-};
+let citiesArr = ['Canada', 'brazil', 'barbados', 'Haiti', 'spain', 'Morocco', 'sweden', 'Norway'];
 
-console.log(citiesAtoJ(regex6));
+const citiesAtoJ = ((arr) => {
+  let regexThing = /\b[A-Ja-j]*/g;
+  return console.log(arr.filter(regexThing));
+});
+
+citiesAtoJ(citiesArr);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
