@@ -53,8 +53,29 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  // Solution code here...
+  
+  return charArray.sort((a, b) => {
+
+    if (b.children.length !== a.children.length) {
+      return a.children.length - b.children.length;
+   
+    }
+    else {
+      //check for alphabetical order of houses
+      if (a.house < b.house) {
+        return -1;
+      }
+      else {
+        if (a.house > b.house) {
+          return 1;
+        }
+        return 0;
+      }
+    }
+  }); 
 };
+
+console.log(sortByChildren(characters));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -107,15 +128,19 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 // Solution Version 1: works fine in Replit but doesn't pass the test here
 
-let cities = "Canada brazil barbados Haiti spain Morocco sweden Norway";
+// let cities = "Canada brazil barbados Haiti spain Morocco sweden Norway";
 
 const isCapitalized = ((str) => {
   let capCities = /\b[A-Z][a-z]*/g;
-  return str.match(capCities);
-//  return console.log(str.match(capCities));
+  let answer = str.match(capCities);
+    if (answer == null) {
+      return [];
+    }
+  return answer;
+  //  return console.log(str.match(capCities));
 });
 
-// Solution Version 2:  the return on the str.match method appears to be an array so it seems adding an array push would be redundant but I'm trying that below anyway:
+// // Solution Version 2:  the return on the str.match method appears to be an array so it seems adding an array push would be redundant but I'm trying that below anyway. Turns out this creates an output as the first element in an array. It is GAHBAGE.
 
 // const isCapitalized = ((str) => {
 //   let newArray = [];
@@ -124,21 +149,26 @@ const isCapitalized = ((str) => {
 //   return newArray;
 // });
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
-let citiesArr = ['Canada', 'brazil', 'barbados', 'Haiti', 'spain', 'Morocco', 'sweden', 'Norway'];
+// let citiesArr = ['Canada', 'brazil', 'barbados', 'Haiti', 'spain', 'Morocco', 'sweden', 'Norway'];
 
 const citiesAtoJ = ((arr) => {
-  let regexThing = /\b[A-Ja-j]*/g;
-  return console.log(arr.filter(regexThing));
+
+  const regexThing = ((str) => {
+    let validator = /^[a-jA-J]\w*/;
+    return validator.test(str);
+  });
+
+  let result = arr.filter(regexThing);
+  // return console.log(arr.filter(regexThing));
+  return result;
 });
 
-citiesAtoJ(citiesArr);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
