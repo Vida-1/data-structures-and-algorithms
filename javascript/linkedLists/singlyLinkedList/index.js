@@ -1,7 +1,14 @@
 'use strict';
 
-class LinkedList {
+// const { empty } = require("cheerio/lib/api/manipulation");
 
+// Attribution: All code below collected from class lecture (lead by Sara Russert)
+
+class Node {  //this is our node class, any new Node we make will have thi structure
+  constructor(value, next = null) { //Sara explains this in lecture
+    this.value = value;
+    this.next = next;  //this.prev is for a doubly-linked list which points both to next and prev
+  }
 }
 
 class LinkedList {  // create a LinkedList class
