@@ -61,7 +61,7 @@ const sortByChildren = (charArray) => {
    
     }
     else {
-      //check for alphabetical order of houses
+      //check for alphabetical order of houses  -- my sister helped me work this part out, the basis is from https://www.freecodecamp.org/news/how-to-sort-alphabetically-in-javascript/ but I got badly turned around with bracketing
       if (a.house < b.house) {
         return -1;
       }
@@ -159,8 +159,8 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = ((arr) => {
 
-  const regexThing = ((str) => {
-    let validator = /^[a-jA-J]\w*/;
+  const regexThing = ((str) => {  // this solution is modeled after an example given in the movie combined with 
+    let validator = /^[a-jA-J]\w*/; // caret means begins with, \w means word and the asterisk captures multiple word entries 
     return validator.test(str);
   });
 
