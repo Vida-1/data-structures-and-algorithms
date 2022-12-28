@@ -24,4 +24,3 @@ Write the following methods for the Linked List Class:
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
- this is a test
