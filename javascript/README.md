@@ -8,5 +8,5 @@
 2. Code Challenge 02 - [insertShiftArray (README)](/array/insertShiftArray/Whiteboard02.JPG)
 3. Code Challenge 03 - []()
 4. Code Challenge 04 - []()
-5. Code Challenge 05 - [singlyLinkedList (README)](/)
-6. Code Challenge 06 - []()
+5. Code Challenge 05 - [singlyLinkedList (README)](/linkedLists/singlyLinkedList/README.md)
+6. Code Challenge 06 - [linked-list-insertions (README)](/linkedLists/linkedListInsertions/README.md)
