@@ -19,6 +19,7 @@ class LinkedList {  // create a LinkedList class
   // size is a property you could add to any data structure
   // always the head is the very first node of the list
 
+  
   // The class should contain:
   /*  Method: insert
         Arguments: value
