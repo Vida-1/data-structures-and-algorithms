@@ -15,3 +15,4 @@
 9. Code Challenge 09 - []()
 10. Code Challenge 10 - []()
 11. Code Challenge 11 - [stackQueuePseudo (README)](/javascript/linkedLists/stackQueuePseudo/README.md)
+12. Code Challenge 12 - [stackQueueAnimalShelter (README)](/)
