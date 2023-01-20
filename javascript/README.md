@@ -11,3 +11,7 @@
 5. Code Challenge 05 - [Linked-lists (README)](/javascript/linkedList/singlyLinkedLists/README.md)
 6. Code Challenge 06 - [linked-list-insertions (README)](/linkedLists/linkedListInsertions/README.md)
 7. Code Challenge 07 - [linked-list-kth (README)](/javascript/linkedLists/linkedListKth/README.md)
+8. Code Challenge 08 - []()
+9. Code Challenge 09 - []()
+10. Code Challenge 10 - []()
+11. Code Challenge 11 - [stackQueuePseudo (README)](/javascript/linkedLists/stackQueuePseudo/README.md)
