@@ -1,23 +1,40 @@
-# Challenge Summary
-Create a class called AnimalShelter which holds only dogs and cats.
-The shelter operates using a first-in, first-out approach.
-Implement the following methods:
-* enqueue
-  * Arguments: animal
+# LAB - Class 13
 
-    * animal can be either a dog or a cat object.
-* dequeue
-  * Arguments: pref
+## Project: caps (PhaseThree)
 
-    * pref can be either "dog" or "cat"
-Return: either a dog or a cat, based on preference.
-If pref is not "dog" or "cat" then return null.
+### Author: Vida P.
 
-## Whiteboard Process
-![Whiteboard](/stacksAndQueues/stackQueueAnimalShelter/Whiteboard-cchall12-1st-drafta.JPG)
+### Links and Resources
 
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+<!-- [ci/cd](http://xyz.com) (GitHub Actions)
+- [back-end server url](http://xyz.com) (when applicable)
+- [front-end application](http://xyz.com) (when applicable) -->
 
-## Solution
-<!-- Show how to run your code, and examples of it in action -->
+- [Reading Notes 10 -Stacks & Queues](https://vida-1.github.io/reading-notes/read10_401.html)
+- [Reading Notes 11 -Event Driven Applications](https://vida-1.github.io/reading-notes/read11_401.html)
+- [Reading Notes 12 -Socket.io](https://vida-1.github.io/reading-notes/read12_401.html)
+- [Reading Notes 13 -Message Queues](https://vida-1.github.io/reading-notes/read13_401.html)
+- 
+### Setup
+
+#### `.env` requirements (where applicable)
+
+i.e.
+
+- `PORT` - Port Number
+- `DATABASE_URL` - URL to the running Postgres instance/db
+
+#### How to initialize/run your application (where applicable)
+
+npm start
+
+#### How to use your library (where applicable)
+
+#### Tests
+
+npm test
+<!-->
+- Any tests of note?
+- Describe any tests that you did not complete, skipped, etc
+-->
+#### UML
