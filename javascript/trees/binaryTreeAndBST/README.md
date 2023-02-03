@@ -27,5 +27,7 @@ Space: O(1);
 * run the tests: npm test
 
 ## Notes
-The height of the tree dictates the Big O Space complexity of a recursive tree solution (the max height of things on the stack at any given time);
-[BST Values Rules Graphic by Vida](/javascript/trees/binaryTreeAndBST/BSTRules.jpg)
+Per the reading, the height of the tree dictates the Big O Space complexity of a recursive tree solution (the max height of things on the stack at any given time);
+
+[BST Values Rules Graphic by Vida](/BSTRules.jpg)
+[Tree Traveral-Snip from Stacy Y's published Reading Assignment](/TreeTraversalsByStacyY.JPG)
