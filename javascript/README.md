@@ -22,4 +22,4 @@
 16. Code Challenge 16 - []()
 17. Code Challenge 17 - [tree-breadth-first (README)](/javascript/trees/tree-breadth-first/README.md)
 18. Code Challenge 18 - [tree-fizz-buzz](/trees/tree-fizz-buzz/README.md)
-19. Code Challenge 19 - []()
+19. Code Challenge 19 - [Mock Interviews #3](/mocks/class19/README.md)
