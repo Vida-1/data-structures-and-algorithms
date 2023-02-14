@@ -19,3 +19,7 @@
 13. Code Challenge 13 - [stackQueueBrackets (README)](/javascript/stacksAndQueues/stackQueueBrackets/README.md)
 14. Code Challenge 14 - (Mock Interviews #2)- (TBD)
 15. Code Challenge 15 - [trees (README)](/javascript/trees/binaryTreeAndBST/README.md)
+16. Code Challenge 16 - []()
+17. Code Challenge 17 - [tree-breadth-first (README)](/javascript/trees/tree-breadth-first/README.md)
+18. Code Challenge 18 - [tree-fizz-buzz](/trees/tree-fizz-buzz/README.md)
+19. Code Challenge 19 - []()
